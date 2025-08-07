@@ -7,19 +7,16 @@ This repository contains the implementation and supporting materials for the pap
 
 ## Table of Contents
 
-1. [Overview](#overview)  
-2. [Key Contributions](#key-contributions)  
-3. [Repository Structure](#repository-structure)  
-4. [Installation](#installation)  
-5. [Dependencies](#dependencies)  
-6. [Data Preparation](#data-preparation)  
-7. [Model Architecture](#model-architecture)  
-8. [Training](#training)  
-9. [Evaluation](#evaluation)  
-10. [Results & Benchmarks](#results--benchmarks)  
-11. [Usage Examples](#usage-examples)  
-12. [Citation](#citation)  
-13. [Contact](#contact)  
+1. [Overview]
+2. [Key Contributions]
+3. [Repository Structure]
+4. [Installation] 
+5. [Dependencies] 
+6. [Data Preparation]
+7. [Model Architecture]  
+8. [Training] 
+9. [Citation]
+10. [Contact]
 
 ---
 

@@ -84,7 +84,7 @@ ASNO/
 1. **Clone this repository**
 
    ```bash
-   git clone https://github.com/yourusername/ASNO.git
+   git clone https://github.com/vispikarkaria/ASNO.git
    cd ASNO
    ```
 
@@ -119,25 +119,6 @@ ASNO/
 * **tqdm** ≥ 4.60
 * *(Optional)* **CUDA Toolkit** ≥ 10.2 for GPU support
 
----
-
-## Data Preparation
-
-You must supply your own benchmark data in the following formats:
-
-* **DED Melt-Pool** (`Additive Manufacturing/`):
-  `.mat` or `.npz` with fields:
-
-  * `temperature`: `[N, T, S, S]` (time × spatial grid)
-  * `input_data`: `[N, T, features]` (laser power, scan speed, etc.)
-
-* **Lorenz System**:
-  `.npy` arrays of shape `[N, T, state_dim]` plus optional forcing terms.
-
-* **Darcy Flow**:
-  `.mat` files with `'temperature'` and `'input_data'` fields matching the AM format.
-
-Place your processed files under matching subdirectories of `data/` or `Additive Manufacturing/`, and update the file-loading paths in the top of each training script (`AM_ASNO_training.py`, etc.).
 
 ---
 
@@ -204,72 +185,7 @@ Each script accepts flags for data paths, hyperparameters, and an `--output-dir`
 * Training logs (`loss.csv`, `learning_curve.png`)
 * TensorBoard summaries (if enabled)
 
----
-
-## Evaluation
-
-Once training completes, evaluate your saved checkpoint:
-
-```bash
-python ASNO_training_code.py evaluate \
-  --checkpoint runs/DED_meltpool/checkpoints/model_epoch_50.pt \
-  --data-dir "Additive Manufacturing/data" \
-  --out-file metrics_ded.json
-```
-
-Supported metrics:
-
-* **MSE** or custom `LpLoss` on test data
-* **OOD rollouts** (if you supply `--ood-data-dir`)
-* **Time-series error plots** saved under `evaluation/`
-
----
-
-## Results & Benchmarks
-
-Precomputed results are available under `experiments/` (or your own `runs/` folder). Example performance on the four main benchmarks:
-
-| Benchmark     | Parameters | GPU Mem  | Test Loss   | OOD Loss (fwd/back) |
-| ------------- | ---------- | -------- | ----------- | ------------------- |
-| Darcy Flow    | \~0.76 M   | \~180 MB | 0.0368      | 0.0673 / 0.0982     |
-| Lorenz System | \~0.26 M   | \~ 76 MB | 7.94e-4     | —                   |
-| Navier–Stokes | \~4.66 M   | \~880 MB | 0.0213      | —                   |
-| DED Melt-Pool | \~5.3 M    | \~1 GB   | MAPE 2.50 % | —                   |
-
-For full comparisons against FNO, U-Net, DeepONet, etc., please see Tables 1–3 in the paper.
-
----
-
-## Usage Examples
-
-1. **Quick synthetic demo**
-
-   ```bash
-   python ASNO_training_code.py demo_synthetic --config demos/config_synth.yaml
-   ```
-
-2. **Attention visualization**
-
-   ```python
-   from utilities4 import load_model, visualize_attention
-   model = load_model('runs/lorenz/checkpoints/model_epoch_100.pt')
-   attn = visualize_attention(model, sample_tensor)
-   plt.imshow(attn); plt.colorbar()
-   ```
-
-3. **Zero-Shot Generalization**
-
-   ```bash
-   python ASNO_training_code.py zero_shot \
-     --model runs/darcy/checkpoints/model_epoch_75.pt \
-     --ood-config demos/ood_darcy.yaml
-   ```
-
----
-
 ## Citation
-
-If you use ASNO in your research, please cite:
 
 ```bibtex
 @article{karkaria2025asno,
@@ -285,8 +201,8 @@ If you use ASNO in your research, please cite:
 ## Contact
 
 **Lead Author**: Vispi Nevile Karkaria
-Email: [vnk3019@northwestern.edu](mailto:vnk3019@northwestern.edu)
-Repo: [https://github.com/yourusername/ASNO](https://github.com/yourusername/ASNO)
+Email: [vispikarkaria127@gmail.com]
+Repo: [https://github.com/vispikarkaria/ASNO]
 
 Pull requests, issues, and feedback are very welcome!
 

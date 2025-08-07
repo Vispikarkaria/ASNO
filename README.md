@@ -174,50 +174,6 @@ Plots comparing predictions vs. ground truth are saved to `evaluation/`.
 
 ---
 
-## Results & Benchmarks
-
-The repository includes precomputed results for all four benchmarks in `experiments/`:
-
-| Benchmark     | Params  | GPU (MB) | Test Loss  | OOD Losses            |
-| ------------- | ------- | -------- | ---------- | --------------------- |
-| Darcy Flow    | \~0.76M | \~180    | 0.0368     | 0.0673 / 0.0982 (f/b) |
-| Lorenz System | \~0.26M | \~76     | 0.000794   | —                     |
-| Navier–Stokes | \~4.66M | \~880    | 0.0213     | —                     |
-| DED Melt Pool | \~5.3M  | \~1024   | MAPE 2.50% | —                     |
-
-Refer to Tables 1–3 in the paper for detailed comparisons against FNO, U-Net, GNOT, DeepONet, and other baselines.
-
----
-
-## Usage Examples
-
-### 1. Quick Training on Synthetic Data
-
-```bash
-python src/train.py --config experiments/config_synthetic.yaml
-```
-
-### 2. Visualize Attention Maps
-
-```python
-from src.models import CombinedModel
-from src.utils import load_checkpoint, visualize_attention
-
-model = load_checkpoint('checkpoints/model.pt')
-attention_map = visualize_attention(model, sample_input)
-plt.imshow(attention_map)
-plt.colorbar()
-```
-
-### 3. Zero-Shot Generalization Demo
-
-```bash
-python demos/zero_shot_demo.py --model checkpoints/model.pt \
-  --env-config demos/env_configs/new_permeability.yaml
-```
-
----
-
 ## Citation
 
 If you use this code in your research, please cite:

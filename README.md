@@ -46,14 +46,15 @@ This separable IMEX‐inspired design yields zero-shot generalization to unseen 
 
 ```text
 
-- **AM_ASNO_training.py**: end-to-end training pipeline for the DED melt-pool benchmark  
-- **ASNO_Lorenz_Training.py**: Lorenz ODE temporal extrapolation experiments  
-- **ASNO_darcy_training.py**: Darcy flow PDE training and evaluation  
-- **ASNO_training_code.py**: shared dataset loaders, model wrappers, and launch scripts  
-- **Additive Manufacturing/**: placeholder folder for raw/processed DED data or write-ups  
-- **VAE.py**: Encoder/Decoder and VAE_model classes (used in some experiments)  
-- **utilities4.py**: `MatReader`, `GaussianNormalizer`, `LpLoss`, and other helper functions  
-- **README.md**: project overview, setup, usage, and citation instructions  
+ASNO/
+├── AM_ASNO_training.py # Additive-manufacturing training script
+├── ASNO_Lorenz_Training.py # Lorenz-system training script
+├── ASNO_darcy_training.py # Darcy-flow training script
+├── ASNO_training_code.py # Core ASNO training utilities
+├── Additive Manufacturing/ # (Optional) data / notes for AM experiments
+├── VAE.py # Variational Autoencoder definitions
+├── utilities4.py # MatReader, normalizers, custom losses, etc.
+└── README.md # This file
 
 ```
 

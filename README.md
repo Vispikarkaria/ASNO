@@ -1,4 +1,3 @@
-````markdown
 # Attention-based Spatio-Temporal Neural Operator (ASNO)
 
 This repository contains the implementation and supporting materials for the paper **“An Attention-based Spatio-Temporal Neural Operator for Evolving Physics”** by Vispi Karkaria et al. ASNO integrates a Transformer‐based temporal predictor with a nonlocal attention operator to deliver accurate, interpretable, and generalizable spatio‐temporal modeling of physical systems.
@@ -45,7 +44,7 @@ This separation yields:
 
 ## Repository Structure
 
-```text
+text
 ASNO/
 ├── AM_ASNO_training.py         # DED melt-pool (additive manufacturing) training pipeline
 ├── ASNO_Lorenz_Training.py     # Lorenz system temporal extrapolation experiments
@@ -55,7 +54,6 @@ ASNO/
 ├── VAE.py                      # Variational autoencoder definitions (used in some pre-training steps)
 ├── utilities4.py               # MatReader, GaussianNormalizer, LpLoss, and other helpers
 └── README.md                   # This file
-````
 
 * **`AM_ASNO_training.py`**
   End-to-end pipeline for full-field temperature prediction in Directed Energy Deposition melt pools.

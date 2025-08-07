@@ -6,16 +6,16 @@ This repository contains the implementation and supporting materials for the pap
 
 ## Table of Contents
 
-1. [Overview]
-2. [Key Contributions]
-3. [Repository Structure]
-4. [Installation] 
-5. [Dependencies] 
-6. [Data Preparation]
-7. [Model Architecture]  
-8. [Training] 
-9. [Citation]
-10. [Contact]
+1. Overview
+2. Key Contributions
+3. Repository Structure
+4. Installation 
+5. Dependencies
+6. Data Preparation
+7. Model Architecture  
+8. Training 
+9. Citation
+10. Contact
 
 ---
 

@@ -45,20 +45,16 @@ This separable IMEX‐inspired design yields zero-shot generalization to unseen 
 ## Repository Structure
 
 ```text
-├── data/                  # Placeholder directory for raw and processed datasets
-│   ├── darcy/             # Darcy flow datasets
-│   ├── lorenz/            # Lorenz system datasets
-│   ├── nvs/               # Navier–Stokes datasets
-│   └── meltpool/          # DED melt pool temperature datasets
-├── src/                   # Source code
-│   ├── models.py          # ASNO model definitions (TransformerEncoder, MS_Loss/NAO, CombinedModel)
-│   ├── train.py           # Training script with data loading and loops
-│   ├── evaluate.py        # Evaluation and metrics scripts
-│   ├── utils.py           # Data utilities (MatReader, normalizers, LpLoss)
-│   └── config.py          # Hyperparameter configurations
-├── experiments/           # Preconfigured experiment logs and checkpoints
-├── README.md              # This file
-└── requirements.txt       # Python package dependencies
+
+- **AM_ASNO_training.py**: end-to-end training pipeline for the DED melt-pool benchmark  
+- **ASNO_Lorenz_Training.py**: Lorenz ODE temporal extrapolation experiments  
+- **ASNO_darcy_training.py**: Darcy flow PDE training and evaluation  
+- **ASNO_training_code.py**: shared dataset loaders, model wrappers, and launch scripts  
+- **Additive Manufacturing/**: placeholder folder for raw/processed DED data or write-ups  
+- **VAE.py**: Encoder/Decoder and VAE_model classes (used in some experiments)  
+- **utilities4.py**: `MatReader`, `GaussianNormalizer`, `LpLoss`, and other helper functions  
+- **README.md**: project overview, setup, usage, and citation instructions  
+
 ```
 
 ---

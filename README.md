@@ -44,7 +44,7 @@ This separation yields:
 
 ## Repository Structure
 
-text
+```text
 ASNO/
 ├── AM_ASNO_training.py         # DED melt-pool (additive manufacturing) training pipeline
 ├── ASNO_Lorenz_Training.py     # Lorenz system temporal extrapolation experiments
@@ -54,7 +54,7 @@ ASNO/
 ├── VAE.py                      # Variational autoencoder definitions (used in some pre-training steps)
 ├── utilities4.py               # MatReader, GaussianNormalizer, LpLoss, and other helpers
 └── README.md                   # This file
-
+```
 * **`AM_ASNO_training.py`**
   End-to-end pipeline for full-field temperature prediction in Directed Energy Deposition melt pools.
 * **`ASNO_Lorenz_Training.py`**
